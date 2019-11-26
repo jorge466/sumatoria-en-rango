@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+
+int suma (int a, int b);
+
+int main() 
+{
+	int p, q;
+	cout << "Introduzca el valor inicial del rango: ";
+	cin >> q;
+	cout << "Introduzca el valor final del rango: ";
+	cin >> p;
+	while (p <= 0 || q <= 0) {
+		cout << "Vlores positivos" << endl;
+		cout << "Introduzca el valor inicial: ";
+		cin >> q;
+		cout << "Introduzca el rango requerido: ";
+	    cin >> p; 
+	}
+	cout << "La sumatoria desde " << q << " hasta " << p << " es: " << suma(p, q) << endl;
+return 0;	
+}
+
+
+int suma (int a, int b) {
+	int sumatorio = 0;
+	while( a >= b) {
+		sumatorio = sumatorio + b;
+		b++;
+	}
+     return sumatorio;
+}
